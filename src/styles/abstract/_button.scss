@@ -1,0 +1,14 @@
+.mod_button {
+	padding: rem-calc(10 26);
+	background: $color-martinique;
+	color: $color-white;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+
+	&:hover {
+		text-decoration: none;
+		background: #4b4465;
+		color: $color-white;
+	}
+}

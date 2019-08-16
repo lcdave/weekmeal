@@ -1,0 +1,62 @@
+html,
+body,
+#app{
+	height: 100%;
+}
+
+body {
+	font-size: rem-calc(14px);
+	line-height: (24 / 16);
+	font-weight: 400;
+	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	@include breakpoint(medium) {
+		font-size: rem-calc(16px);
+	}
+}
+
+[class^="page_"] {
+	padding: rem-calc(15px 15px 0);
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+strong, b {
+	font-weight: $font-weight-bold!important;
+}
+
+h1 {
+	font-size: rem-calc(50px);
+	font-weight: $font-weight-bold;
+	color: $color-white;
+	margin: rem-calc(0 0 3px);
+
+	@include breakpoint(large) {
+		font-size: rem-calc(31px);
+		margin: rem-calc(0 0 4px);
+	}
+}
+
+p {
+	margin: 0 0 1em;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.svg-icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	color: inherit;
+	vertical-align: middle;
+	fill: none;
+	stroke: currentColor;
+}
+
+.svg-fill {
+	fill: currentColor;
+	stroke: none;
+}

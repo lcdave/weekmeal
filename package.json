@@ -1,24 +1,43 @@
 {
-  "name": "weekmealvue",
+  "name": "weekmeal.ch",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --mode=development",
     "build": "vue-cli-service build",
+    "build-dev": "vue-cli-service build --mode=development",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "ajv": "^6.7.0",
+    "axios": "^0.18.0",
+    "foundation-sites": "^6.5.2",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.11",
+    "path": "^0.12.7",
+    "swiper": "^4.4.6",
+    "truncate-html": "^1.0.1",
+    "vee-validate": "^2.1.7",
+    "vue": "^2.5.21",
+    "vue-recaptcha": "^1.1.1",
+    "vue-router": "^3.0.1",
+    "vue-slide-up-down": "^1.6.0",
+    "vuex": "^3.1.0",
+    "what-input": "^5.1.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.8.0",
-    "@vue/cli-plugin-eslint": "^3.8.0",
-    "@vue/cli-service": "^3.8.0",
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-eslint": "^3.3.0",
+    "@vue/cli-service": "^3.7.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
+    "eslint": "^5.12.1",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.0.1",
+    "style-resources-loader": "^1.2.1",
+    "vue-cli-plugin-style-resources-loader": "^0.1.3",
+    "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
     "root": true,
@@ -29,9 +48,16 @@
       "plugin:vue/essential",
       "eslint:recommended"
     ],
-    "rules": {},
+    "rules": {
+      "no-console": 0
+    },
     "parserOptions": {
       "parser": "babel-eslint"
+    },
+    "globals": {
+      "$": true,
+      "jQuery": true,
+      "google": true
     }
   },
   "postcss": {
@@ -41,6 +67,7 @@
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not ie <= 8"
   ]
 }

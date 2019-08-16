@@ -1,0 +1,71 @@
+/**
+ * COLORS (Naming suggestions under: http://chir.ag/projects/name-that-color/)
+ **/
+
+$color-white: #FFFFFF;
+$color-martinique: #322D44;
+$color-black: #000000;
+
+/**
+ * TYPOGRAPHY
+ **/
+$font-family-base: "Open Sans", Arial, sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+/**
+ * FOUNDATION
+ **/
+
+// 1. Global
+// ---------
+
+$global-font-size: 62.5%;
+$global-width: rem-calc(1268);
+$global-lineheight: 1.5;
+
+$body-background: $color-white;
+$body-font-color: $color-black;
+$body-font-family: $font-family-base;
+$body-antialiased: true;
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-weight-normal: $font-weight-light;
+$global-weight-bold: $font-weight-bold;
+$global-radius: 0;
+$global-text-direction: ltr;
+$global-flexbox: true;
+
+
+// 2. Breakpoints
+// --------------
+
+$breakpoints: (
+	small: 0,
+	medium: 700px,
+	large: 1023px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (small medium large);
+
+
+// 56. Xy Grid
+// -----------
+
+$xy-grid: true;
+$grid-container: $global-width;
+$grid-columns: 12;
+$grid-margin-gutters: (
+	small: 15px,
+	medium: 15px,
+	large: 30px,
+);
+$grid-padding-gutters: $grid-margin-gutters;
+$grid-container-padding: (
+	small: 30px,
+	medium: 30px,
+	large: 128px,
+);
+$grid-container-max: $global-width;
+$xy-block-grid-max: 8;
