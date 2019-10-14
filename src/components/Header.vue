@@ -1,8 +1,8 @@
 <template>
-	<div class="mod_header">
-		<div class="header_container">
-			<div class="header_grid">
-				<div class="header_cell">
+	<div class="header">
+		<div class="header__container">
+			<div class="header__grid">
+				<div class="header__cell">
 					<h1>{{ title }}</h1>
 				</div>
 			</div>
@@ -22,29 +22,29 @@
 </script>
 
 <style lang="scss">
-	.mod_header {
+	.header {
 		background: $color-martinique;
 		padding: rem-calc(40 0);
 		margin-bottom: rem-calc(70);
-	}
 
-	.header-container {
-		@include xy-grid-container();
-	}
-
-	.header-grid {
-		@include xy-grid();
-		@include xy-gutters($negative: true);
-	}
-
-	.header-item {
-		@include xy-cell(12 of 12, $breakpoint: small);
-
-		@include breakpoint(medium) {
-			@include xy-cell(12 of 12, $breakpoint: medium);
+		&__container {
+			@include xy-grid-container();
 		}
-		@include breakpoint(large) {
-			@include xy-cell(12 of 12, $breakpoint: large);
+
+		&__grid {
+			@include xy-grid();
+			@include xy-gutters($negative: true);
+		}
+
+		&__item {
+			@include xy-cell(12 of 12, $breakpoint: small);
+
+			@include breakpoint(medium) {
+				@include xy-cell(12 of 12, $breakpoint: medium);
+			}
+			@include breakpoint(large) {
+				@include xy-cell(12 of 12, $breakpoint: large);
+			}
 		}
 	}
 </style>

@@ -1,10 +1,10 @@
 <template>
 	<div class="meal">
-		<div class="meal_image" v-bind:style="{backgroundImage: 'url(' + WeekMealItem.bgImage + ')' }"></div>
-		<div class="meal_body">
-			<div class="meal_header">{{getCurrentDay}}</div>
-			<div class="meal_description">{{ WeekMealItem.description }}</div>
-			<div class="meal_details"><a href="#" class="mod_button">Rezept</a></div>
+		<div class="meal__image" v-bind:style="{backgroundImage: 'url(' + WeekMealItem.bgImage + ')' }"></div>
+		<div class="meal__body">
+			<div class="meal__header">{{getCurrentDay}}</div>
+			<div class="meal__description">{{ WeekMealItem.description }}</div>
+			<div class="meal__details"><a href="#" class="mod_button">Rezept</a></div>
 		</div>
 	</div>
 </template>
@@ -46,14 +46,14 @@
 			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 		}
 
-		&_image {
+		&__image {
 			background-size: cover;
 			width: 100%;
 			height: 190px;
 			background-position: center center;
 		}
 
-		&_header {
+		&__header {
 			font-size: rem-calc(12);
 			padding-top: rem-calc(20);
 			text-transform: uppercase;
@@ -61,12 +61,12 @@
 			color: $color-martinique;
 		}
 
-		&_description {
+		&__description {
 			font-size: rem-calc(19);
 			font-weight: bold;
 		}
 
-		&_details {
+		&__details {
 			position: absolute;
 			left: 50%;
 			-webkit-transform: translateX(-50%);

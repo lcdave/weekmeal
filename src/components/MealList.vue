@@ -1,8 +1,8 @@
 <template>
-    <div class="mod_meal_list">
-        <div class="meal_list-container">
-            <div class="meal_list-grid">
-                <div class="meal_list-item" v-bind:key="WeekMealItem.id" v-for="(WeekMealItem, index) in WeekMeal">
+    <div class="meal-list">
+        <div class="meal-list__container">
+            <div class="meal-list__grid">
+                <div class="meal-list__item" v-bind:key="WeekMealItem.id" v-for="(WeekMealItem, index) in WeekMeal">
                     <MenuListItem  v-bind:WeekMealItem="WeekMealItem" v-bind:WeekMealItemIndex="index" />
                 </div>
             </div>
@@ -66,27 +66,27 @@
 </script>
 
 <style lang="scss">
-    .mod_meal_list {
+    .meal-list {
         margin-bottom: rem-calc(70);
-    }
 
-    .meal_list-item {
-        @include xy-cell(12 of 12, $breakpoint: small);
+        &__item {
+            @include xy-cell(12 of 12, $breakpoint: small);
 
-        @include breakpoint(medium) {
-            @include xy-cell(4 of 12, $breakpoint: medium);
+            @include breakpoint(medium) {
+                @include xy-cell(4 of 12, $breakpoint: medium);
+            }
+            @include breakpoint(large) {
+                @include xy-cell(4 of 12, $breakpoint: large);
+            }
         }
-        @include breakpoint(large) {
-            @include xy-cell(4 of 12, $breakpoint: large);
+
+        &__container {
+            @include xy-grid-container();
         }
-    }
 
-    .meal_list-container {
-        @include xy-grid-container();
-    }
-
-    .meal_list-grid {
-        @include xy-grid();
-        @include xy-gutters($negative: true);
+        &__grid {
+            @include xy-grid();
+            @include xy-gutters($negative: true);
+        }
     }
 </style>
