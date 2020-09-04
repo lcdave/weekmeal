@@ -34,7 +34,7 @@
     "eslint": "^5.12.1",
     "eslint-plugin-vue": "^5.0.0",
     "express": "^4.17.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.0.1",
     "serve-static": "^1.14.1",
