@@ -8,7 +8,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "ajv": "^6.7.0",
+    "ajv": "^6.12.3",
     "axios": "^0.18.0",
     "body-parser": "*",
     "express": "*",
